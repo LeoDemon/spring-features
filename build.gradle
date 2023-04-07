@@ -1,0 +1,33 @@
+allprojects {
+    apply plugin: 'java'
+    apply plugin: 'idea'
+}
+
+idea {
+    project {
+        jdkName = JavaVersion.VERSION_17
+        languageLevel = JavaVersion.VERSION_17
+        vcs = "Git"
+    }
+}
+
+subprojects {
+    group = 'tech.demonlee.spring'
+    version = '1.0.0'
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
+
+    repositories {
+        mavenCentral()
+    }
+
+    dependencies {
+    }
+
+    test {
+    }
+}
+
+wrapper {
+    gradleVersion = '8.0'
+}
